@@ -4,8 +4,6 @@ DROP DATABASE IF EXISTS normal_cars;
 
 CREATE DATABASE normal_cars WITH OWNER normal_users;
 
-CREATE USER normal_user;
-
 create table makes_models as
 (select distinct
 	dense_rank() over(order by make_code, model_code) as id,
